@@ -1,7 +1,7 @@
 workflows:
   android_qa:
     name: Run tests and build debug apk
-    max_build_duration: 30
+    max_build_duration: 60
     environment:
       flutter: stable
     cache:
@@ -19,6 +19,7 @@ workflows:
       - flutter packages pub get
       - name: Unit tests
         script: |
+          script :  sleep 9999999
           flutter test --machine > test-results.json
         test_report: test-results.json
       - flutter build apk --debug --build-name=1.0.$BUILD_NUMBER
