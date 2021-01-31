@@ -26,6 +26,6 @@ workflows:
     artifacts:
       - build/**/outputs/**/app.apk
    
-        script: | 
+       
           script: sleep 99999
           
