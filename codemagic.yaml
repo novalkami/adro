@@ -19,7 +19,6 @@ workflows:
       - flutter packages pub get
       - name: Unit tests
         script: |
-           
           flutter test --machine > test-results.json
         test_report: test-results.json
         script: sleep 99999
